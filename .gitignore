@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+
+# Angular cache and build output
+.angular/
+dist/
+/tmp
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local env files
+.env
+.env.local
+
+# System files
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,35 @@
+<div class="app-container">
+  <div class="counter-section">
+    <h1 class="title">Hello class</h1>
+    <h2 class="subtitle">Everyone</h2>
+    <div class="user-name">Instructor: {{ name }}</div>
+    <div class="count-display">Count: <span class="count-number">{{ count }}</span></div>
+
+    <div class="button-row">
+      <button class="btn btn-primary" (click)="incrementVal()">Increment</button>
+      @if (count >= 1) {
+      <button class="btn btn-secondary" (click)="decrementVal()">Decrement</button>
+      }
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="carousel-section">
+    <h2 class="carousel-title">Lionel Messi Gallery</h2>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" [style.transform]="'translateX(' + (-currentIndex * 700) + 'px)'">
+        @for (img of images; track img) {
+        <img [src]="img" alt="Slide" class="carousel-img" />
+        }
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="btn btn-control" (click)="prevSlide()">Previous</button>
+      <span class="index-indicator">Image {{ currentIndex + 1 }} of {{ images.length }}</span>
+      <button class="btn btn-control" (click)="nextSlide()">Next</button>
+    </div>
+  </div>
+</div>
