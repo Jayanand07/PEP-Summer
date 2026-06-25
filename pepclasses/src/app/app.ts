@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Profile } from './profile/profile';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Profile],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -12,6 +13,27 @@ export class App {
 
   name: string = "John Doe";
   count: number = 0;
+
+  profiles = [
+    {
+      name: 'John Doe',
+      role: 'Lead Instructor',
+      bio: 'Senior Software Engineer with 8+ years of teaching experience.',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80'
+    },
+    {
+      name: 'Jane Smith',
+      role: 'Assistant Professor',
+      bio: 'Specialist in Frontend Frameworks and UI/UX Design.',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80'
+    },
+    {
+      name: 'Alex Rivera',
+      role: 'Mentor & Architect',
+      bio: 'Fullstack Dev passionate about Angular and performance tuning.',
+      avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80'
+    }
+  ];
 
   incrementVal(): void {
     this.count++;

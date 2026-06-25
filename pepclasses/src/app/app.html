@@ -32,4 +32,12 @@
       <button class="btn btn-control" (click)="nextSlide()">Next</button>
     </div>
   </div>
+
+  <hr class="divider" />
+
+  <div class="profile-section">
+    @for (user of profiles; track user.name) {
+      <app-profile [profile]="user"></app-profile>
+    }
+  </div>
 </div>
