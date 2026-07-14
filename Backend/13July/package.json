@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jay Anand <anand.jay426344@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^5.2.1",
