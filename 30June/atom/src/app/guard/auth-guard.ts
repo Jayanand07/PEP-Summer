@@ -6,19 +6,22 @@ export const authGuard: CanActivateFn = (route, state) => {
   const Auth = inject(AuthService);
   const router = inject(Router);
 
-  if(Auth.currLoggedInUser()?.currLoggedInUserStatus) {
-    // console.log('User is already logged in');
+  // Check signal first
+  if (Auth.currLoggedInUser()?.currLoggedInUserStatus === true) {
     return true;
   }
 
-  console.log('AuthService', Auth);
-
-  if(Auth.userLogIn()){
-    // console.log('User is logged in');
-    // router.navigate(['/home']);
-    return true;
+  // Fallback: check localStorage (handles page refresh)
+  const saved = localStorage.getItem('userDetails');
+  if (saved) {
+    const user = JSON.parse(saved);
+    if (user?.currLoggedInUserStatus === true) {
+      Auth.currLoggedInUser.set(user);
+      return true;
+    }
   }
-  
+
+  // Not logged in — redirect to login
+  router.navigate(['']);
   return false;
 };
-

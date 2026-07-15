@@ -15,20 +15,21 @@ export class Signup {
   userName = "";
   password = "";
   passToggle = false;
+  errorMsg = "";
+  successMsg = "";
 
-
-  userLogIn(){
-    const userloginData = {
-      name: this.userName,
-      pass: this.password,
-      currLoggedInUserStatus: false
-    }
-    if(this.userName.trim().length > 3 && this.password.trim().length > 3){
+  userLogIn() {
+    if (this.userName.trim().length > 3 && this.password.trim().length > 3) {
+      const userloginData = {
+        name: this.userName,
+        pass: this.password,
+        currLoggedInUserStatus: false
+      };
       localStorage.setItem("userDetails", JSON.stringify(userloginData));
-      this.route.navigate(['']);
-    }else{
-      return;
+      this.successMsg = "Account created! Redirecting to login...";
+      setTimeout(() => this.route.navigate(['']), 1200);
+    } else {
+      this.errorMsg = "Username and password must be more than 3 characters.";
     }
-    
   }
 }

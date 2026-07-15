@@ -17,22 +17,27 @@ export class Login {
   username = '';
   userpass = '';
   passToggle = false;
+  errorMsg = '';
 
   login() {
-    this.AuthService.password = this.userpass;
     this.AuthService.userName = this.username;
+    this.AuthService.password = this.userpass;
+
     const isLoggedIn = this.AuthService.userLogIn(this.username, this.userpass);
 
     if (isLoggedIn) {
-      this.AuthService.currLoggedInUser.set({
+      const loggedInUser = {
         name: this.username,
         pass: this.userpass,
         currLoggedInUserStatus: true,
-      });
+      };
 
-      localStorage.setItem('userDetails', JSON.stringify(this.AuthService.currLoggedInUser()));
+      this.AuthService.currLoggedInUser.set(loggedInUser);
+      localStorage.setItem('userDetails', JSON.stringify(loggedInUser));
 
       this.router.navigate(['/home']);
+    } else {
+      this.errorMsg = 'Invalid username or password. Please sign up first.';
     }
   }
 }
