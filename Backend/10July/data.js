@@ -1,9 +1,9 @@
 export const users = [
   {
     id: 1,
-    name: "Jay Anand",
-    age: 20,
-    email: "anand.jay426344@gmail.com",
+    name: "Swaraj",
+    age: 24,
+    email: "swaraj@example.com",
     city: "Noida",
     role: "MERN Developer",
     isActive: true,

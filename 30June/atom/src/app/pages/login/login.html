@@ -2,7 +2,6 @@
   <h1 class="text-4xl font-bold text-center m-6">Log In</h1>
   <input [value]="username" required (input)="username = $event.target.value" placeholder="Please enter Username" class="p-6 m-2 bg-gray-300 max-w-3xl min-w-xl rounded-xl"/>
   <input type="password" [value]="userpass" required (input)="userpass = $event.target.value" placeholder="Please enter Password" class="p-6 m-2 bg-gray-300 max-w-3xl min-w-xl rounded-xl" />
-
   @if (errorMsg) {
     <p class="text-red-500 font-semibold mt-2">{{ errorMsg }}</p>
   }

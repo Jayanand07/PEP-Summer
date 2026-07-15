@@ -22,3 +22,5 @@ dist/
 # System files
 Thumbs.db
 Desktop.ini
+.DS_Store
+
