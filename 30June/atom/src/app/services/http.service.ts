@@ -12,7 +12,7 @@ export class HttpService {
   private header = new HttpHeaders({
     accept: 'application/json',
     Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MjU4NjY4OTNjNjBiYTVjYmYwZTY3MThiZGQ2NzMxMCIsIm5iZiI6MTcwNzg1MDI2OC42MzEsInN1YiI6IjY1Y2JiYTFjOGM0NGI5MDE4MDk0MTc5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.58Z0EjNav96xzUihjLQLrt3VYxnBKsuYskFMiX-N51k',
+      'Bearer YOUR_TMDB_READ_TOKEN',
   });
 
   get<T>(endpoint: string, params?: Record<string, string>): Observable<T> {
