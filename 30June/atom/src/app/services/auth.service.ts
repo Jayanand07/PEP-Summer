@@ -11,7 +11,7 @@ export class AuthService {
   password = '' as any;
 
   constructor() {
-    // On app load, restore user from localStorage if exists
+    
     const saved = localStorage.getItem('userDetails');
     if (saved) {
       this.currLoggedInUser.set(JSON.parse(saved));
@@ -24,7 +24,7 @@ export class AuthService {
 
     const savedUser = JSON.parse(saved);
 
-    // Compare entered credentials with saved signup credentials
+    
     if (
       this.userName === savedUser.name &&
       this.password === savedUser.pass

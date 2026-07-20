@@ -14,7 +14,7 @@ const result = tempFn(5, 10);
 console.log(`The result of tempFn is: ${result}`);
 
 let arr: number[] = [1, 2, 3, 4, 1];
-// let arr: number[] = [1, 2, 1, 4, 1, 4, 4, 4];
+
 
 let arr2: Array<string> = ["Hello", "TypeScript", "Array"];
 

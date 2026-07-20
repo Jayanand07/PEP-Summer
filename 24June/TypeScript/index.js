@@ -12,7 +12,7 @@ function tempFn(a, b) {
 const result = tempFn(5, 10);
 console.log(`The result of tempFn is: ${result}`);
 let arr = [1, 2, 3, 4, 1];
-// let arr: number[] = [1, 2, 1, 4, 1, 4, 4, 4];
+
 let arr2 = ["Hello", "TypeScript", "Array"];
 let unknownData = "This is an unknown type";
 unknownData = 34;
@@ -60,4 +60,3 @@ const accordionData = [
         isOpen: false,
     },
 ];
-//# sourceMappingURL=index.js.map

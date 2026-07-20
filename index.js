@@ -7,4 +7,3 @@ const roles = ["Admin", "User", "Mentor"];
 roles.push("SuperAdmin");
 console.log(`Name: ${name}, Age: ${age}, Employed: ${isEmployed}, Roles: ${roles[0]}`);
 console.log("Hello, World!");
-//# sourceMappingURL=index.js.map

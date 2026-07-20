@@ -74,17 +74,17 @@ export class App {
     })
   }
 
-  // arr: number[] = [
-  //   10, 20, 30, 40
-  // ]
+  
+  
+  
 
-  // name = signal("TEST NAME ");
+  
 
-  // obj = {
-  //   name: "TestName",
-  //   age: "TestAge",
-  //   c: 20
-  // }
+  
+  
+  
+  
+  
 }
 
 interface todoInterface{

@@ -13,7 +13,7 @@ export class App {
   public AuthService = inject(AuthService);
 
     ngOnInit() {
-    // console.log("Hello from ng")
+    
     const userDetails = localStorage.getItem('userDetails');
     const parsedDetails = JSON.parse(userDetails ?? `{}`);
     this.AuthService.currLoggedInUser.set(parsedDetails);

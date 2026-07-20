@@ -16,7 +16,7 @@ export class Home {
   public router = inject(Router);
   buttonConfig = buttonConfig;
   textVal = signal<string>('Hello from parent');
-  // userName = this.authService.userName
+  
 
   logout() {
     this.authService.currLoggedInUser.set({

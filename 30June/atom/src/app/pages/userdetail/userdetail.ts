@@ -12,7 +12,7 @@ export class Userdetail{
   private route = inject(ActivatedRoute);
   user = users;
   userId = 0;
-  // userData = {};
+  
   userData = signal<User | null>(null);
   ngOnInit() {
     const currId = Number(this.route.snapshot.paramMap.get('userId'));

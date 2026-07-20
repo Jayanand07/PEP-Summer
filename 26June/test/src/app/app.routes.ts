@@ -5,10 +5,10 @@ import { About } from './about/about';
 import { Contact } from './contact/contact';
 
 export const routes: Routes = [
-    // {
-    //     path: '',
-    //     component: App
-    // },
+    
+    
+    
+    
     {
         path: 'child',
         component: Card

@@ -1,6 +1,6 @@
 console.log("Hello World");
 
-// const inputField = document.getElementById("inputField");
+
 const debounce = (fn, delay) => {
     let timer;
     return function(...args) {
@@ -33,16 +33,16 @@ const DebounceApiFn = debounce(ApiCall, 500);
 const throttleApiFn = throttle(ApiCall, 1000);
 
 inputField.addEventListener("input", () => {
-    //   DebounceApiFn(inputField.value);
+    
     throttleApiFn(inputField.value);
 });
 
 
 
-// let arr = [10, 20, 30];
-// let arr2 = [...arr];
-// // let arr2 = arr;
-// arr.push(40);
 
-// console.log(arr);
-// console.log(arr2);
+
+
+
+
+
+

@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
 
   console.log(arr);
 
-  // console.log(req);
+  
   console.log(res);
 
   const resData = {
@@ -24,27 +24,27 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000);
 
-// server.listen(() => {
-//     console.log("server is running on PORT 3000");
 
-// });
 
-// console.log(data);
 
-// fs.writeFileSync("note.txt", "hello from the code side .")
 
-// fs.writeFileSync("arr.json", JSON.stringify(data));
 
-// fs.writeFile("arr.json", JSON.stringify(data), (err) => {
-//   if (!err) {
-//     console.log("done");
 
-//     const arr = fs.readFileSync("arr.json", "utf-8");
-//     console.log(arr);
-//   }
-// });
 
-// const note = fs.readFileSync("arr.json", "utf-8");
-// console.log("After write file sync");
 
-// const arr = [10, 20, -30, -40, 50];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,21 +22,21 @@ const map = new Map();
 
 
 
-// npm init -y
-// npm i express nodemon 
-const express = require("express"); // Common JS
-// import express from "express"; - Module JS
+
+
+const express = require("express"); 
+
 
 const app = express();
 
 app.use(express.json());
 
-// app.get("/test", (req, res) => {
-//     res.status(200).send("Hello world from EXPRESS");
-// })
 
 
-// GET REQUESTS - READ START
+
+
+
+
 app.get("/test", (req, res) => {
     res.status(200).json("Hello world from EXPRESS");
 })
@@ -48,8 +48,8 @@ app.get("/data", (req, res) => {
     });
 })
 
-app.get("/getuser/:id", (req, res) => { // Params from the URL
-    // console.log(req);
+app.get("/getuser/:id", (req, res) => { 
+    
     const id = Number(req.params.id);
 
     const data = arr.find(idx => idx.id === id);
@@ -59,8 +59,8 @@ app.get("/getuser/:id", (req, res) => { // Params from the URL
         data: data ? data : "Not found"
     })
 
-    // console.log(data ? data : "Not found");
-    // res.status(200).json(data);
+    
+    
 })
 
 app.get("/userdetail", (req, res) => {
@@ -75,9 +75,9 @@ app.get("/userdetail", (req, res) => {
     })
 
 })
-// GET REQUESTS - READ END
 
-// PUT REQUESTS - UPDATE START
+
+
 app.put("/updatedata/:id", (req, res) => {
     const id = Number(req.params.id);
     const {name, age} = req.query;
@@ -94,9 +94,9 @@ app.put("/updatedata/:id", (req, res) => {
         data: arr
     })
 })
-// PUT REQUESTS - UPDATE END
 
-// DELETE REQUEST START
+
+
 app.delete("/delete/:id", (req, res) => {
     const id = Number(req.params.id);
 
@@ -107,7 +107,7 @@ app.delete("/delete/:id", (req, res) => {
         data: arr
     })
 })
-// DELETE REQUEST END
+
 
 
 
@@ -130,7 +130,7 @@ app.post("/adduser", (req, res) => {
 
     res.status(202).json({
         status: "success",
-        // data: arr,
+        
         url : newId
     })
 
@@ -140,7 +140,7 @@ app.get("/:urlId", (req, res) => {
     const id = Number(req.params.urlId);
     const url = map.get(id);
 
-    // console.log(map);
+    
 
     res.redirect(url);
 })
